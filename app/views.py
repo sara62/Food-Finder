@@ -1,5 +1,5 @@
 from app import app
-from searchrequest import *
+from app import searchrequest
 from flask import render_template, redirect
 from flask import request
 
@@ -12,4 +12,5 @@ def index():
 def search():
     term = request.form['Search']
     location = request.form['Location']
-    return redirect('/')
+    test = searchrequest.search(term, location)
+    return render_template('search.html', term = term, location = location, test = test)
