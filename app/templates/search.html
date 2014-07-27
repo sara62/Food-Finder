@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-{{term}}
-{{test}}
+{% for key, value in restaurant_list.items() %}
+<table class="table table-hover">
+  <tr>
+    <td><a href ="{{value}}">Name: {{name}} </a></td>
+    <td>Open: {{is_open}}</td>
+  </tr>
+</table>
+{% endfor %}
 {% endblock %}
