@@ -18,14 +18,15 @@ def search():
     link = []
     is_open = []
     for item in requests.values()[2]:
-        for index in range(len(requests.values(2))):
-            restaurant_list.update(
+        print item['name']
+        print "\n"
+        restaurant_list.update(
                     {
-                        'name': name.append(item.values()[5]),
-                        'link': link.append(item.values()[7]),
-                        'is_open': is_open.append(item.values()[8])
+                        'name': name.append(item['name']),
+                        'link': link.append(item['url']),
+                        'is_open': is_open.append(item['is_closed'])
                     }
             )
-    print restaurant_list
+    print restaurant_list['name']
     return render_template('search.html', term = term, location = location,
                 restaurant_list = restaurant_list)
