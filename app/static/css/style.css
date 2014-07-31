@@ -1,0 +1,13 @@
+.form-horizontal {
+  margin-top: 100px;
+}
+
+.page-header h1 {
+  padding-left: 50%;
+}
+
+#lazy-rating {
+  padding-left: 260px;
+  padding-bottom: 8px;
+  margin-top: -10px;
+}

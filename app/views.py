@@ -13,20 +13,12 @@ def search():
     term = request.form['Search']
     location = request.form['Location']
     requests = searchrequest.search(term, location)
-    restaurant_list = {}
     name = []
     link = []
     is_open = []
-    for item in requests.values()[2]:
-        print item['name']
-        print "\n"
-        restaurant_list.update(
-                    {
-                        'name': name.append(item['name']),
-                        'link': link.append(item['url']),
-                        'is_open': is_open.append(item['is_closed'])
-                    }
-            )
-    print restaurant_list['name']
-    return render_template('search.html', term = term, location = location,
-                restaurant_list = restaurant_list)
+    length = requests.values()[2]
+    for item in length:
+        name.append(item['name']),
+        link.append(item['url']),
+        is_open.append(item['is_closed'])
+    return render_template('search.html', term = term, location = location, name = name, link = link, is_open = is_open, length = length)

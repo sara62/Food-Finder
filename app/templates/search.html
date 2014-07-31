@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-{% for key, value in restaurant_list.items() %}
+{% for value in length %}
 <table class="table table-hover">
   <tr>
-    <td><a href ="{{value}}">Name: {{name}} </a></td>
-    <td>Open: {{is_open}}</td>
+    <td><a href ="{{value.link}}">{{value.name}} </a></td>
+    <td>Open: {{value.is_open}}</td>
   </tr>
 </table>
 {% endfor %}
-{{requests}}
 {% endblock %}
