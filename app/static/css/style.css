@@ -9,10 +9,16 @@ body {
 
 .page-header h1 {
   padding-left: 50%;
+  padding-top: 60px;
 }
 
 #lazy-rating {
-  padding-left: 260px;
+  padding-left: 170px;
   padding-bottom: 8px;
   margin-top: -10px;
+}
+
+#rating {
+  float: right;
+  margin-right: 30px;
 }

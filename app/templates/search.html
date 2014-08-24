@@ -4,10 +4,16 @@
   <h1>Here are your results!</h1>
 </div>
 {% for value in length %}
-<table class="table table-hover">
+<table class="table table-hover table-bordered">
   <tr>
-    <td><a href ="{{value.link}}">{{value.name}} </a></td>
-    <td>Open: {{value.is_open}}</td>
+    <td class="col-md-6"><a href ="{{link}}">{{value.name}}</a>
+      <span id="rating">Rating: {{value.rating}}</span>
+      {% if deals == "on" %}
+      There is a deal
+      {% endif %}
+      <p></p>
+    </td>
+    <td>{{value.is_open}}</td>
   </tr>
 </table>
 {% endfor %}
